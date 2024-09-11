@@ -1,0 +1,50 @@
+variables:
+    GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+    SONAR_HOST_URL: $SONAR_HOST_URL
+    SONAR_TOKEN: $SONAR_TOKEN
+
+stages:
+    - prepare
+    - build
+    - docker
+    - test
+    - sonarqube
+
+# Make safe repository for the job
+prepare:
+    stage: prepare
+    script:
+        - git config --global --add safe.directory "C:/GitLab-Runner/builds/Lz7eAdf7/0/I507486/lawlink-client-software"
+
+build:
+    stage: build
+    script:
+        - ./gradlew assemble
+    artifacts:
+        paths:
+            - build/libs/
+        expire_in: 1 week
+    dependencies:
+        - prepare
+
+test:
+    stage: test
+    script:
+        - ./gradlew test
+    dependencies:
+        - prepare
+
+sonarqube-check:
+    stage: sonarqube
+    script:
+        - ./gradlew test jacocoTestReport sonar
+    only:
+        - main
+    dependencies:
+        - prepare
+
+docker:
+    stage: docker
+    script:
+        - docker build -t stasnikolov03/lawlink-backend .
+        - docker push stasnikolov03/lawlink-backend:latest

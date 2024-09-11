@@ -1,0 +1,42 @@
+.single-case-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .single-case-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-id,
+  .case-type,
+  .case-starting-date,
+  .case-information,
+  .case-status,
+  .case-is-case-won {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .inspect-button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .inspect-button:hover {
+    background: #2980b9;
+  }
+  

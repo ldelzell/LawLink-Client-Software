@@ -1,0 +1,16 @@
+.create-appointment-container {
+  max-width: 400px;
+  margin: 200px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(91, 91, 91, 0.179);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}

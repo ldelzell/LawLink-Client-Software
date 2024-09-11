@@ -1,0 +1,39 @@
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fafafa;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    display: inline-block;
+    clear: both;
+  }
+  
+  .message.sent {
+    background-color: #c6caf8;
+    align-self: flex-end;
+    float: right;
+  }
+  
+  .message.received {
+    background-color: #ffffff;
+    align-self: flex-start;
+    float: left;
+  }
+  
+  .message-text {
+    margin: 0;
+  }
+  
+  .message-timestamp {
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #888;
+    text-align: right;
+  }
+  

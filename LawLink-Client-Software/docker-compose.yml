@@ -1,0 +1,43 @@
+
+services:
+  db:
+    container_name: lawlinknetwork_db_staging
+    image: mysql:latest
+    ports:
+      - "3390:3306"
+    networks:
+      - lawlinknetwork
+    environment:
+      MYSQL_ROOT_PASSWORD: "Cesekar4e"
+      MYSQL_DATABASE: lawlink
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    ports:
+      - "5173:5173"
+    networks:
+      - lawlinknetwork
+    restart: always
+    image: lawlink-frontend
+
+  backend:
+    ports:
+      - "8080:8080"
+    networks:
+      - lawlinknetwork
+    environment:
+      spring_profiles_active: "staging"
+    restart: always
+    image: lawlink-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    links:
+      - db
+
+networks:
+  lawlinknetwork:

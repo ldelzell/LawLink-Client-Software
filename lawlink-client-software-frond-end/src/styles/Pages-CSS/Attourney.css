@@ -1,0 +1,32 @@
+.main-container-attorney {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: linear-gradient(135deg,#34324a, rgb(107, 87, 181), #e0eafc, #cfdef3);}
+
+.container-attorney-data {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff70;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    align-self: center;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.no-info-message {
+    color: #888;
+    text-align: center;
+}

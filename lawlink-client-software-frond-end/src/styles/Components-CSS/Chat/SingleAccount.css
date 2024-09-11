@@ -1,0 +1,38 @@
+.client-container {
+    margin-bottom: 10px;
+  }
+  
+  .client {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    background-color: #d5dbf3;
+
+  }
+  
+  .client:hover {
+    background-color: #cdc1ff;
+  }
+  
+  .client-avatar {
+    margin-right: 10px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .client-name {
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  
+  /* Add more styles for client details as needed */
+  

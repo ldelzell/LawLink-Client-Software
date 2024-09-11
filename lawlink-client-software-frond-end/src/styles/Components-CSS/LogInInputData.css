@@ -1,0 +1,87 @@
+/* Background animation */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism effect */
+.login-content {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.login-title {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2rem;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login input fields */
+.login-input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.login-input:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(55, 65, 184, 0.849);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+  background-color:  rgba(118, 129, 253, 0.849);
+  transform: scale(1.05);
+}
+
+.create-account-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.create-account-link:hover {
+  text-decoration: underline;
+}
