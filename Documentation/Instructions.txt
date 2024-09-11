@@ -1,0 +1,8 @@
+To who it may concern,
+
+This is quick instrction on how to look at my submission.
+
+Backend Gitlab URL: https://git.fhict.nl/I507486/lawlink-client-software
+Frontend Gitlab URL: https://git.fhict.nl/I507486/lawlink-client-software-frond-end
+
+Take a look at the video that I made showcasing how my project works and all the functionalities I have.
